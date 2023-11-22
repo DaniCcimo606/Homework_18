@@ -1,29 +1,24 @@
-let main = document.querySelector(`.main`);
+let result;
 
 do {
 
-    let operation = prompt(`Что вы хотите сделать? (Сумма - "+", разница - "-", умножение - "*", деление - "/");`)
+    let operation = prompt(`Что вы хотите сделать? (Сумма: " + ", разница: " - ", умножение: " * ", деление: " / ");`);
     
     if (operation !== null) {
-        let firstNum = +prompt(`Введите первое число:`);
-        let secondNum = +prompt(`Введите второе число:`);
+        let firstNum = prompt(`Введите первое число:`);
+        let secondNum = prompt(`Введите второе число:`);
         
-        if (firstNum !== null && secondNum !== null) {
-            if (operation == `+`) {
-                result = firstNum + secondNum;
-            } else if (operation == `-`) {
-                result = firstNum - secondNum;
-            } else if (operation == `*`) {
-                result = firstNum * secondNum;
-            } else if (operation == `/`) {
-                result = firstNum / secondNum;
-            } else {
-                alert(`Sorry, invalid character :(`);
-            }
-        } else {
-            continue;
+        if (operation == `+`) {
+            result = firstNum + secondNum;
+        } else if (operation == `-`) {
+            result = firstNum - secondNum;
+        } else if (operation == `*`) {
+            result = firstNum * secondNum;
+        } else if (operation == `/`) {
+            result = firstNum / secondNum;
         }
     } else {
+        alert(`Ok, goodbye :)`);
         break;
     }
     
